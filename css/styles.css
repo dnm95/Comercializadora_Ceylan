@@ -1,0 +1,252 @@
+
+/*---------------------------- STYLE FOR NAVBAR -----------*/
+.brand-stylish{
+    padding-left: 0.5em !important;
+}
+.menu-items{
+    padding-right: 1.5em !important;
+}
+nav ul a{
+    font-size: 1.1rem !important;
+}
+.dropdown-content li > a{
+    color: #01579b !important;
+}
+input[type=search]{
+    font-size: 1.5rem !important;
+}
+
+.search-bar{
+    background: white !important;
+}
+
+/*-------------------------- END STYLE FOR NAVBAR ------------*/
+
+/*------------------------- STYLE FOR DETAIL CATEGORY AND LIST CATEGORIES ----------*/
+.input-field{
+    margin-top: 0 !important;
+}
+.products-results{
+    font-size: 1.2rem;
+}
+select{
+    font-size: 1.1rem;
+}
+.breadcrumb-menu{
+    padding-left: 1em;
+}
+.breadcrumb{
+    font-size: 1.1rem !important;
+}
+.order-filters{
+    padding-right: 0.8em !important;
+}
+.category-detail{
+    margin-top:3.5em;
+}
+.product-list, .category-list{
+    margin-top:1.6em;
+}
+.card .card-title{
+    font-size: 1.2rem !important;
+}
+.loader{
+    margin-top: 4.5em;
+    margin-bottom: 4.5em;
+}
+
+.card{
+    padding-top: 1em !important;
+}
+
+.card .card-image{
+    width: 160px !important;
+    height: 160px !important;
+    margin: 0 auto !important;
+}
+
+.card .card-image img{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+.card .card-content{
+    padding-top: 6px !important;
+}
+
+/*---------------------- STYLE FOR VIEW PRODUCT --------------*/
+.product-title{
+    margin-top: 5em;
+}
+.product-info{
+    padding-left: 2em !important;
+}
+.product-info h4{
+    margin-top: 0 !important;
+}
+.product-container{
+    margin-top: 4em;
+}
+.center-image{
+    margin: 0 auto !important;
+}
+.available{
+    margin-top: 1em;
+}
+.available span{
+    margin-top: 1em;
+}
+.info-text{
+    font-size: 1.2rem;
+    text-align: justify;
+    display: block;
+}
+.chip{
+    font-size: 1rem !important;
+}
+.product-description{
+    margin-top: 1em;
+}
+.social{
+    font-size: 35px;
+    display: inline-block;
+    padding-right: 0.2em;
+    margin-top: 0.5em;
+}
+.social a:hover, .pdf-file a:hover{
+    opacity: 0.7;
+    transition: opacity .4s ease-out;
+    -moz-transition: opacity .4s ease-out;
+    -webkit-transition: opacity .4s ease-out;
+    -o-transition: opacity .4s ease-out;
+}
+.facebook a{
+    color: #3b5998 !important;
+}
+.twitter a{
+    color: #00aced !important;
+}
+.whatsapp a{
+    color: #25D366 !important;
+}
+.mail a{
+    color: #ffeb3b;
+    padding-right: 0 !important;
+}
+.pdf-file{
+    font-size: 45px;
+    width: 100%;
+    margin-top: 0.3em;
+}
+.pdf a{
+    color: #f44336  !important;
+}
+.pdf span{
+    font-size: 1.2rem !important;
+    padding-left: 0.8em;
+}
+.quotation{
+    margin-top: 1.5em;
+}
+/*---------------------- ABOUT US ---------------------------- */
+.about-text{
+    font-size: 1.2rem;
+}
+
+
+.footer-desc{
+    text-align: justify;
+}
+
+/*----------------------- CONTACT ----------------------------- */
+.atention{
+    font-size: 1.6rem;
+    padding: 0 0.75rem;
+}
+.icon-green{
+    color: #2e7d32;
+}
+.phone-number{
+    padding-left: 1em;
+    font-size: 1.5rem;
+}
+.contact-message{
+    font-size: 1.4rem;
+    padding: 0 0.75rem;
+}
+.google-maps{
+    padding: 0 0.75rem !important;
+}
+
+/*----------------------- STYLE HELPERS------------------------ */
+.bold{
+    font-weight: bold;
+}
+.btn{
+    background-color: #0288d1 !important;
+}
+.slider .indicators .indicator-item.active {
+    background-color:#0277bd !important;;
+}
+.carousel{
+    height: 250px !important;
+}
+.carousel .carousel-item{
+    width: 150px !important;
+    height: 150px !important;
+}
+.blank-space{
+    width: 100%;
+    height: 100px;
+}
+.blank-space-10{
+    width: 100%;
+    height: 10px;
+}
+.blank-space-20{
+    width: 100%;
+    height: 20px;
+}
+.blank-space-30{
+    width: 100%;
+    height: 30px;
+}
+.blank-space-50{
+    width: 100%;
+    height: 50px;
+}
+
+/* label color */
+.input-field label {
+    color: #616161 !important;
+    font-size: 1.3rem !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=number]:focus + label ,.input-field textarea:focus + label {
+    color: #0d47a1 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field input[type=number]:focus ,.input-field textarea:focus {
+    border-bottom: 1px solid #0d47a1 !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+/* valid color */
+.input-field input[type=text].valid, .input-field input[type=email].valid, .input-field input[type=number].valid {
+    border-bottom: 1px solid #4caf50 !important;
+    box-shadow: 0 1px 0 0 #4caf50 !important;
+}
+/* invalid color */
+.input-field input[type=text].invalid, .input-field input[type=email].invalid, .input-field input[type=number].invalid {
+    border-bottom: 1px solid #f44336 !important;
+    box-shadow: 0 1px 0 0 #f44336 !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #0d47a1 !important;
+}
+.input-field .prefix{
+    color: #78909c !important;
+}
+
+.input-field input[type=text], .input-field input[type=email], .input-field input[type=number],.input-field textarea {
+    font-size: 1.2rem !important;
+}
