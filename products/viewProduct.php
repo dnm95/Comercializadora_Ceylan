@@ -7,25 +7,25 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 <body>
   
-  <?php include ('php/navbar.php'); ?>
+  <?php include ('../php/navbar_for_products.php'); ?>
   <?php
-      require 'php/connection.php';
+      require '../php/connection.php';
   ?>
 
   <!-- BREADCRUMB MENU -->
   <nav class="breadcrumb-menu blue-grey lighten-1">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="index.php" class="breadcrumb">Inicio</a>
+                <a href="../index.php" class="breadcrumb">Inicio</a>
                 <?php
                   $idProduct = intval($_GET['id']);
                   getCategoryByProduct($idProduct, $conn)
@@ -59,7 +59,7 @@
 
   <?php $conn->close(); ?>
 
-  <?php include ('php/footer.php'); ?>
+  <?php include ('../php/footer_for_products.php'); ?>
 
   </body>
 </html>

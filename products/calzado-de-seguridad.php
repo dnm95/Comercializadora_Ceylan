@@ -3,26 +3,26 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Equipo de Vialidad</title>
+  <title>Calzado de Seguridad</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   
-  <?php include ('php/navbar.php'); ?>
+  <?php include ('../php/navbar_for_products.php'); ?>
 
     <!-- BREADCRUMB MENU -->
     <nav class="breadcrumb-menu blue-grey lighten-1">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="index.php" class="breadcrumb">Inicio</a>
-                <a href="cascos-de-seguridad.php" class="breadcrumb">Equipo de Vialidad</a>
+                <a href="../index.php" class="breadcrumb">Inicio</a>
+                <a href="calzado-de-seguridad.php" class="breadcrumb">Calzado de Seguridad</a>
             </div>
         </div>
     </nav>
@@ -46,8 +46,8 @@
                         <div class="collapsible-body">
                             <form id="checkboxes">
                                 <?php
-                                require 'php/connection.php';
-                                $idCategory = 3;
+                                require '../php/connection.php';
+                                $idCategory = 1;
                                 getBrands($conn,$idCategory)
                                 ?>
                             </form>
@@ -60,7 +60,7 @@
 
             <div class="valign-wrapper">
                 <div class="col s12 m6 l9">
-                    <h5 class="bold">Equipo de Vialidad</h5>
+                    <h5 class="bold">Calzado de Seguridad</h5>
                 </div>
 
                 <div class="col s12 m6 l4 order-filters">
@@ -132,7 +132,7 @@
                     document.getElementById("list-products").innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET","php/orderProducts.php?cat=3&orderFilter="+str,true);
+            xmlhttp.open("GET","../php/orderProducts.php?cat=1&orderFilter="+str,true);
             xmlhttp.send();
         }
     }
@@ -165,13 +165,13 @@
                 document.getElementById("list-products").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","php/filterProducts.php?cat=3&filters="+selected,true);
+        xmlhttp.open("GET","../php/filterProducts.php?cat=1&filters="+selected,true);
         xmlhttp.send();
     }
 
   </script>
 
-  <?php include ('php/footer.php'); ?>
+  <?php include ('../php/footer_for_products.php'); ?>
 
   </body>
 </html>

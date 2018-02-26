@@ -9,20 +9,20 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   
-  <?php include ('php/navbar.php'); ?>
+    <?php include ('../php/navbar_for_products.php'); ?>
 
     <!-- BREADCRUMB MENU -->
     <nav class="breadcrumb-menu blue-grey lighten-1">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="index.php" class="breadcrumb">Inicio</a>
-                <a href="cascos-de-seguridad.php" class="breadcrumb">Protección Contra Caídas</a>
+                <a href="../index.php" class="breadcrumb">Inicio</a>
+                <a href="proteccion-contra-caidas.php" class="breadcrumb">Protección Contra Caídas</a>
             </div>
         </div>
     </nav>
@@ -46,7 +46,7 @@
                         <div class="collapsible-body">
                             <form id="checkboxes">
                                 <?php
-                                require 'php/connection.php';
+                                require '../php/connection.php';
                                 $idCategory = 6;
                                 getBrands($conn,$idCategory)
                                 ?>
@@ -132,7 +132,7 @@
                     document.getElementById("list-products").innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET","php/orderProducts.php?cat=6&orderFilter="+str,true);
+            xmlhttp.open("GET","../php/orderProducts.php?cat=6&orderFilter="+str,true);
             xmlhttp.send();
         }
     }
@@ -165,13 +165,13 @@
                 document.getElementById("list-products").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","php/filterProducts.php?cat=6&filters="+selected,true);
+        xmlhttp.open("GET","../php/filterProducts.php?cat=6&filters="+selected,true);
         xmlhttp.send();
     }
 
   </script>
 
-  <?php include ('php/footer.php'); ?>
+  <?php include ('../php/footer_for_products.php'); ?>
 
   </body>
 </html>

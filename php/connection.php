@@ -82,11 +82,11 @@ function getCategories($conn)
             echo"<div class='col s12 m6 l3 product-list'>";
             echo"<div class='card'>";
                 echo"<div class='card-image'>";
-                    echo"<a href='" .$row['URL']."'><img src='".$row['imagen']."'></a>";
+                    echo"<a href='products/" .$row['URL']."'><img src='".$row['imagen']."'></a>";
                 echo"</div>";
                 echo"<div class='card-content center-align'>";
                     echo"<span class='card-title grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
-                    echo"<p><a class='waves-effect waves-light btn' href='" .$row['URL']."'>Ver Categoría</a></p>";
+                    echo"<p><a class='waves-effect waves-light btn' href='products/" .$row['URL']."'>Ver Categoría</a></p>";
                 echo"</div>";
             echo"</div>";
         echo"</div>";
@@ -172,6 +172,22 @@ function searchCategoryProducts($idCategory, $conn)
                 echo"</div>";
         }
     }
+}
+
+function getNextIdProduct($conn)
+{
+     $sql = "SELECT MAX(idProductos) as id FROM productos";
+     $result = $conn->query($sql);
+     if ($result->num_rows != 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $newId = $row['id'] + 1;
+        }
+    }
+
+     echo "  <script>
+                document.getElementById('idProducto').value = '".$newId."'
+            </script>";
 }
 
 function getProductInfo($idProduct,$conn)

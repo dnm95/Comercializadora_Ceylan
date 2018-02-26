@@ -3,26 +3,26 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Protección Respiratoria</title>
+  <title>Protección Lumbar</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   
-  <?php include ('php/navbar.php'); ?>
+    <?php include ('../php/navbar_for_products.php'); ?>
 
     <!-- BREADCRUMB MENU -->
     <nav class="breadcrumb-menu blue-grey lighten-1">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="index.php" class="breadcrumb">Inicio</a>
-                <a href="cascos-de-seguridad.php" class="breadcrumb">Protección Respiratoria</a>
+                <a href="../index.php" class="breadcrumb">Inicio</a>
+                <a href="proteccion-lumbar.php" class="breadcrumb">Protección Lumbar</a>
             </div>
         </div>
     </nav>
@@ -46,8 +46,8 @@
                         <div class="collapsible-body">
                             <form id="checkboxes">
                                 <?php
-                                require 'php/connection.php';
-                                $idCategory = 10;
+                                require '../php/connection.php';
+                                $idCategory = 8;
                                 getBrands($conn,$idCategory)
                                 ?>
                             </form>
@@ -60,7 +60,7 @@
 
             <div class="valign-wrapper">
                 <div class="col s12 m6 l9">
-                    <h5 class="bold">Protección Respiratoria</h5>
+                    <h5 class="bold">Protección Lumbar</h5>
                 </div>
 
                 <div class="col s12 m6 l4 order-filters">
@@ -132,7 +132,7 @@
                     document.getElementById("list-products").innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET","php/orderProducts.php?cat=10&orderFilter="+str,true);
+            xmlhttp.open("GET","../php/orderProducts.php?cat=8&orderFilter="+str,true);
             xmlhttp.send();
         }
     }
@@ -165,13 +165,13 @@
                 document.getElementById("list-products").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","php/filterProducts.php?cat=10&filters="+selected,true);
+        xmlhttp.open("GET","../php/filterProducts.php?cat=8&filters="+selected,true);
         xmlhttp.send();
     }
 
   </script>
 
-  <?php include ('php/footer.php'); ?>
+  <?php include ('../php/footer_for_products.php'); ?>
 
   </body>
 </html>

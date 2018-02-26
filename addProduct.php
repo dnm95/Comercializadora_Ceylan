@@ -40,8 +40,9 @@
             <div class="row">
 
                 <div class="input-field col s12">
-                    <input id="idProducto" name="idProducto" type="number" class="validate" autocomplete='off' required>
+                    <input id="idProducto" name="idProducto" type="number" class="validate" disabled required>
                     <label for="idProducto">idProducto</label>
+                    <?php require 'php/connection.php'; getNextIdProduct($conn) ?>
                 </div>
                 <div class="clearfix"></div>
                 <div class="blank-space-30"></div>
@@ -49,7 +50,7 @@
                 <div class="input-field col s12">
                     <select name="categories">
                         <option value="" disabled selected>Seleccionar Categoría</option>
-                        <?php require 'php/connection.php'; generateCategoriesOptions($conn) ?>
+                        <?php generateCategoriesOptions($conn) ?>
                     </select>
                 </div>
                 <div class="clearfix"></div>
@@ -77,7 +78,7 @@
                 <div class="blank-space-30"></div>
 
                 <div class="input-field col s12">
-                    <input id="imagen" value="images/category/" name="imagen" type="text" class="validate" autocomplete='off' required>
+                    <input id="imagen" value="../images/category/" name="imagen" type="text" class="validate" autocomplete='off' required>
                     <label for="imagen">URL Imagen</label>
                 </div>
                 <div class="clearfix"></div>
