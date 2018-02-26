@@ -147,6 +147,21 @@ select{
 .quotation{
     margin-top: 1.5em;
 }
+/*----------------------STYLE FOR BRAND DISPLAY----------------*/
+.brand-title{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.brand-info{
+    font-size: 1.45rem;
+}
+.btn-brand{
+    width: 100% !important;
+    height: 75px !important;
+    line-height: 75px !important;
+    font-size: 1.35rem !important;
+    font-weight: bold;
+}
 /*---------------------- ABOUT US ---------------------------- */
 .about-text{
     font-size: 1.2rem;

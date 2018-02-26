@@ -71,6 +71,75 @@ function getBrands($conn, $idCat)
     }
 }
 
+function getBrandsForDisplay($conn){
+    $sql = "SELECT * FROM marca ORDER BY Nombre ASC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows != 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo"<div class='col s12 m6 l3 product-list'>";
+                echo "<a href='products/viewBrand.php?brand=".$row['idMarca']."' class='waves-effect waves-light btn-large btn-brand cyan darken-3'>".$row['Nombre']."</a>";
+            echo "</div>";
+        
+        }
+    }
+}
+
+function getBrandRef($idBrand, $conn)
+{
+    $sql = "SELECT * FROM marca WHERE idMarca= '" .$idBrand."'";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows != 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo"<a class='breadcrumb' id='brandName' href='viewBrand.php?brand=".$idBrand."'>".$row['Nombre']."</a>";
+            echo "<script>document.title = '".$row['Nombre']."';</script>";
+        }
+    }
+
+}
+
+function getTotalProductsByBrand($idBrand, $conn){
+    $sql = "SELECT COUNT(*) as total FROM productos WHERE Marca_idMarca= '" .$idBrand."'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows != 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo"<div class='col s12 m6 l8' id='products-count'>";
+                    echo "<span class='products-results'>" .$row["total"]. " productos</span>";
+            echo"</div>";
+        }
+    } else {
+        echo "0 results";
+    }
+}
+
+function searchBrandProducts($idBrand, $conn)
+{
+    $sql = "SELECT * FROM productos WHERE Marca_idMarca= '" .$idBrand."' ORDER BY Nombre ASC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows != 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo"<div class='col s12 m6 l3 product-list'>";
+                    echo"<div class='card'>";
+                        echo"<div class='card-image'>";
+                            echo"<a href='viewProduct.php?id=" .$row['idProductos']. "'> <img src='".$row['Imagen']."'></a>";
+                        echo"</div>";
+                        echo"<div class='card-content center-align'>";
+                            echo"<span class='card-title activator grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
+                            echo"<p><a class='waves-effect waves-light btn' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
+                        echo"</div>";
+                    echo"</div>";
+                echo"</div>";
+        }
+    }
+}
+
 function getCategories($conn)
 {
     $sql = "SELECT * FROM categoria ORDER BY Nombre ASC";
