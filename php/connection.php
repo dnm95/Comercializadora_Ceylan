@@ -243,6 +243,62 @@ function searchCategoryProducts($idCategory, $conn)
     }
 }
 
+function getCategoriesForFilter($conn,$idBrand)
+{
+    //GET ALL PRODUCTS FROM THE BRAND
+    $sql = "SELECT DISTINCT * FROM productos WHERE Marca_idMarca='".$idBrand."'";
+    $result = $conn->query($sql);
+    $categories_BD = [];
+
+    if ($result->num_rows != 0) {
+        while($row = $result->fetch_assoc()) {
+            array_push($categories_BD,$row['Categoria_idCategoria']);
+        }
+    }
+
+    //DELETE REPEATED VALUES
+    $category_unique = array_unique($categories_BD);
+    $aux_array = array();
+
+    //DELETING EMPTY POSITIONS FROM DE ARRAY AND MOVING TO AN AUX
+    for($c=0; $c<=count($category_unique); $c++)
+    {
+        if(isset($category_unique[$c]))
+        {
+            array_push($aux_array,$category_unique[$c]);
+        }
+    }
+
+    $sql_aux = "";    
+
+    //CREATE THE AUXILIAR QUERY
+    for($c=0; $c<count($aux_array); $c++){
+        
+        if($c == count($aux_array)- 1)
+        {
+            $sql_aux.="idCategoria =".$aux_array[$c]."";    
+            break;
+        }
+
+        $sql_aux.="idCategoria =".$aux_array[$c]." OR ";
+        
+    }
+
+    //EXECUTE THE FINAL QUERY FOR GETTING THE BRANDS THAN BELONGS TO THIS CATEGORY
+    $sql = "SELECT * FROM categoria WHERE ";
+    $sql.=$sql_aux;
+
+    $result = $conn->query($sql);
+    if ($result->num_rows != 0) {
+        while($row = $result->fetch_assoc()) {
+            echo"<p>";
+                echo"<input type='checkbox' class='filled-in' id='".$row['Nombre']."' name='".$row['idCategoria']."' onchange='filterCategory(this)' />";
+                echo"<label for='".$row['Nombre']."'>".$row['Nombre']."</label>";
+            echo"</p>";
+        }
+    }
+}
+
 function getNextIdProduct($conn)
 {
      $sql = "SELECT MAX(idProductos) as id FROM productos";

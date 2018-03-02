@@ -48,13 +48,12 @@
                     <li>
                         <div class="collapsible-header active">
                             <i class="material-icons">add</i>
-                            Marca
+                            Categoría
                         </div>
                         <div class="collapsible-body">
                             <form id="checkboxes">
                                 <?php
-                                $idCategory = 1;
-                                getBrands($conn,$idCategory)
+                                getCategoriesForFilter($conn,$idBrand)
                                 ?>
                             </form>
                         </div>
@@ -119,7 +118,6 @@
   <script>
     function orderProducts(str) {
         var idBrand = '<?php echo $idBrand; ?>';
-        console.log(idBrand);
         if (str == "") {
             document.getElementById("list-products").innerHTML = "";
             return;
@@ -147,6 +145,40 @@
     }
 
   </script>
+
+    <script>
+    function filterCategory(str) {
+        var idBrand = '<?php echo $idBrand; ?>';
+        //Get all checkbox checked
+        var selected = [];
+        $('#checkboxes input:checked').each(function() {
+            selected.push($(this).attr('name'));
+        });
+
+        selected = JSON.stringify(selected);
+
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+            document.getElementById("list-products").innerHTML = "";
+            document.getElementById("loader").classList.remove("hide");
+            document.getElementById("products-count").classList.add("hide");
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("loader").classList.add("hide");
+                document.getElementById("list-products").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","../php/filterProductsByCategory.php?brand="+idBrand+"&filters="+selected,true);
+        xmlhttp.send();
+    }
+
+  </script>
+
 
   <?php include ('../php/footer_for_products.php'); ?>
 
