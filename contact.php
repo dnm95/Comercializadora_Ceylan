@@ -56,7 +56,7 @@
                     <textarea id="message" class="materialize-textarea" required></textarea>
                     <label for="message">Mensaje</label>
                 </div>
-                <button type="submit" name="action" class="waves-effect waves-light btn light-blue darken-2 right">Enviar <i class="material-icons right">send</i></button>
+                <button type="submit" disabled name="action" class="waves-effect waves-light btn light-blue darken-2 right">Enviar <i class="material-icons right">send</i></button>
             </div>
         </form>
       </div>

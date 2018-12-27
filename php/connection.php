@@ -396,7 +396,7 @@ function getProductInfo($idProduct,$conn)
                         }
 
                         echo "<div class='quotation'>";
-                            echo "<a href='quotation.php?p=".$row['Nombre']."' class='waves-effect waves-light btn blue-grey darken-1 right'>Cotizar Producto <i class='material-icons right'>playlist_add_check</i></a>";
+                            echo "<!-- <a href='quotation.php?p=".$row['Nombre']."' class='waves-effect waves-light btn blue-grey darken-1 right'>Cotizar Producto <i class='material-icons right'>playlist_add_check</i></a> -->";
                         echo "</div>";
 
                     echo "</div>";

@@ -13,6 +13,9 @@
 nav ul a{
     font-size: 1.1rem !important;
 }
+nav .brand-logo {
+    font-size: 1.5rem !important;
+}
 .dropdown-content li > a{
     color: #01579b !important;
 }
@@ -197,6 +200,20 @@ select{
 }
 .google-maps{
     padding: 0 0.75rem !important;
+}
+
+/*---------------------- STYLE FOR FOOTER -------------------- */
+.page-footer {
+    padding-top: 0px !important;
+}
+
+.footer-copyright a {
+    color: #FFF !important;
+    cursor: pointer;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
 }
 
 /*----------------------- STYLE HELPERS------------------------ */

@@ -27,21 +27,6 @@
           </div>
         </div>
       </li>
-      <!--
-      <li>
-        <img src="images/slider/lapadu-1385450_1920.jpg">
-        <div class="caption left-align">
-          <h2>Los mejores productos</h2>
-          <h4 class="light grey-text text-lighten-3">Productos cómodos y seguros</h4>
-        </div>
-      </li>
-      <li>
-        <img src="images/slider/osh-1040512_1920.jpg">
-        <div class="caption center-align">
-          <h2>Los mejores productos</h2>
-          <a href="categories.php" class="btn-large waves-effect waves-light blue-grey darken-1">Ver Productos</a>
-        </div>
-      </li>-->
     </ul>
   </div>
 
@@ -72,18 +57,6 @@
       </div>
     </div>
   </div>
-
-  <!--<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h1 class="header center">Bienvenido a Comercializadora Ceylán</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Expertos en equipo de seguridad</h5>
-      </div>
-      <div class="row center">
-        <a href="categories.php" class="btn-large waves-effect waves-light blue-grey darken-1">Ver Categorías</a>
-      </div>
-    </div>
-  </div>-->
 
   <div class="carousel">
     <a class="carousel-item" href="#one!"><img src="images/brands/JYRSA.png"></a>
