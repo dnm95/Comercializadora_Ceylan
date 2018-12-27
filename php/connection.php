@@ -132,7 +132,7 @@ function searchBrandProducts($idBrand, $conn)
                         echo"</div>";
                         echo"<div class='card-content center-align'>";
                             echo"<span class='card-title activator grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
-                            echo"<p><a class='waves-effect waves-light btn' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
+                            echo"<p><a class='waves-effect waves-light btn blue-grey darken-1' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
                         echo"</div>";
                     echo"</div>";
                 echo"</div>";
@@ -155,7 +155,7 @@ function getCategories($conn)
                 echo"</div>";
                 echo"<div class='card-content center-align'>";
                     echo"<span class='card-title grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
-                    echo"<p><a class='waves-effect waves-light btn' href='products/" .$row['URL']."'>Ver Categoría</a></p>";
+                    echo"<p><a class='waves-effect waves-light btn blue-grey darken-1' href='products/" .$row['URL']."'>Ver Categoría</a></p>";
                 echo"</div>";
             echo"</div>";
         echo"</div>";
@@ -235,7 +235,7 @@ function searchCategoryProducts($idCategory, $conn)
                         echo"</div>";
                         echo"<div class='card-content center-align'>";
                             echo"<span class='card-title activator grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
-                            echo"<p><a class='waves-effect waves-light btn' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
+                            echo"<p><a class='waves-effect waves-light btn blue-grey darken-1' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
                         echo"</div>";
                     echo"</div>";
                 echo"</div>";
@@ -396,7 +396,7 @@ function getProductInfo($idProduct,$conn)
                         }
 
                         echo "<div class='quotation'>";
-                            echo "<a href='quotation.php?p=".$row['Nombre']."' class='waves-effect waves-light btn light-blue darken-2 right'>Cotizar Producto <i class='material-icons right'>playlist_add_check</i></a>";
+                            echo "<a href='quotation.php?p=".$row['Nombre']."' class='waves-effect waves-light btn blue-grey darken-1 right'>Cotizar Producto <i class='material-icons right'>playlist_add_check</i></a>";
                         echo "</div>";
 
                     echo "</div>";
@@ -447,7 +447,7 @@ function getRandomProducts($idProduct, $conn)
                 echo"</div>";
                 echo"<div class='card-content center-align'>";
                     echo"<span class='card-title activator grey-text text-darken-4 truncate'>" .$row['Nombre']. "</span>";
-                    echo"<p><a class='waves-effect waves-light btn' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
+                    echo"<p><a class='waves-effect waves-light btn blue-grey darken-1' href='viewProduct.php?id=" .$row['idProductos']. "'>Ver Producto</a></p>";
                 echo"</div>";
             echo"</div>";
         echo"</div>";            

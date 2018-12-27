@@ -1,6 +1,6 @@
 <?php
     echo"
-        <footer class='page-footer light-blue darken-4'>
+        <footer class='page-footer blue-grey darken-1'>
         <div class='container'>
         <div class='row'>
             <div class='col l6 s12'>
@@ -29,9 +29,9 @@
         </div>
         </div>
         <div class='footer-copyright'>
-        <div class='container'>
-        Desarrollado por: <a target='_blank' class='orange-text text-lighten-3' href='https://www.visualcv.com/daniel-nava-martinez/pdf'>Daniel Nava Martínez</a>
-        </div>
+            <div class='container'>
+            © 2018 Comercializadora Ceylán
+            </div>
         </div>
     </footer>
 

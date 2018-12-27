@@ -15,7 +15,7 @@
 </head>
 <body>
   
-<?php include ('../php/navbar_for_products.php'); ?>
+<?php include ('../php/navbar.php'); ?>
 
     <!-- BREADCRUMB MENU -->
     <nav class="breadcrumb-menu blue-grey lighten-1">
@@ -171,7 +171,7 @@
 
   </script>
 
-  <?php include ('../php/footer_for_products.php'); ?>
+  <?php include ('../php/footer.php'); ?>
 
   </body>
 </html>

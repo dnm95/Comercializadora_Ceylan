@@ -27,7 +27,6 @@
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <h1 class="header center">Comercializadora Ceylán</h1>
       <div class="row center">
         <h4 class="header col s12 light">¿Quiénes Somos?</h4>
       </div>

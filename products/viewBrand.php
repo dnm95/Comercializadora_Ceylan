@@ -15,7 +15,7 @@
 </head>
 <body>
   
-  <?php include ('../php/navbar_for_products.php'); ?>
+  <?php include ('../php/navbar.php'); ?>
   <?php
       require '../php/connection.php';
   ?>
@@ -180,7 +180,7 @@
   </script>
 
 
-  <?php include ('../php/footer_for_products.php'); ?>
+  <?php include ('../php/footer.php'); ?>
 
   </body>
 </html>

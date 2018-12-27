@@ -1,7 +1,11 @@
 
 /*---------------------------- STYLE FOR NAVBAR -----------*/
 .brand-stylish{
-    padding-left: 0.5em !important;
+    padding-left: 0.6em !important;
+}
+.logo-text{
+    font-size: 1rem;
+    font-style: italic;
 }
 .menu-items{
     padding-right: 1.5em !important;
@@ -13,12 +17,15 @@ nav ul a{
     color: #01579b !important;
 }
 input[type=search]{
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
 }
-
+label{
+    color: #000 !important;
+}
 .search-bar{
     background: white !important;
 }
+
 
 /*-------------------------- END STYLE FOR NAVBAR ------------*/
 
