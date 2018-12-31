@@ -18,27 +18,27 @@
   <!-- BREADCRUMB MENU -->
   <nav class="breadcrumb-menu blue-grey lighten-1">
     <div class="nav-wrapper">
-        <div class="col s12">
-            <a href="index.php" class="breadcrumb">Inicio</a>
-            <a href="brands.php" class="breadcrumb">Marcas</a>
-        </div>
+      <div class="col s12">
+        <a href="index.php" class="breadcrumb">Inicio</a>
+        <a href="brands.php" class="breadcrumb">Marcas</a>
+      </div>
     </div>
   </nav>
 
 
     <div class="row">
-        <div class="row center">
-            <h2 class="header col s12 light">Marcas</h2>
-        </div>
-        <div class="row center about-text">
-            <p class="brand-info">Tras más de 20 años en el mercado nos hemos hecho distribuidores de las mejores marcas de equipo de seguridad para el trabajador.</p>
-        </div>
-        <div id="category-list">
-            <?php
-            require 'php/connection.php';
-            getBrandsForDisplay($conn)
-            ?>
-        </div>
+      <div class="row center">
+        <h2 class="header col s12 light">Marcas</h2>
+      </div>
+      <div class="row center about-text">
+        <p class="brand-info">Tras más de 20 años en el mercado nos hemos hecho distribuidores de las mejores marcas de equipo de seguridad para el trabajador.</p>
+      </div>
+      <div id="category-list">
+        <?php
+          require 'php/connection.php';
+          getBrandsForDisplay($conn)
+        ?>
+      </div>
     </div>
 
     <div class="blank-space"></div>

@@ -16,23 +16,21 @@
   <script src='/PaginaComer/js/init.js'></script>
   <script>$('.dropdown-button').dropdown();</script>
   <script>
-      $(document).ready(function(){
-          $('.modal').modal();
-          $('.collapsible').collapsible();
-          $('.carousel').carousel({dist:0,
-              shift:0,
-              padding:20,});
-          $('.slider').slider({indicators:false, height: 540});
-          $('.materialboxed').materialbox();
-          $('select').material_select();
-                  
-      });
-      autoplay()   
-      function autoplay() {
-          $('.carousel').carousel('next');
-          setTimeout(autoplay, 1600);
-      }
+    $(document).ready(function(){
+      $('.modal').modal();
+      $('.collapsible').collapsible();
+      $('.carousel').carousel({dist:0,
+          shift:0,
+          padding:20,});
+      $('.slider').slider({indicators:false, height: 540});
+      $('.materialboxed').materialbox();
+      $('select').material_select();
+    });
+    autoplay()   
+    function autoplay() {
+      $('.carousel').carousel('next');
+      setTimeout(autoplay, 1600);
+    }
   </script>
-
   ";
 ?>

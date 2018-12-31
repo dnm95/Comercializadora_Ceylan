@@ -17,12 +17,12 @@
 
   <!-- BREADCRUMB MENU -->
   <nav class="breadcrumb-menu blue-grey lighten-1">
-        <div class="nav-wrapper">
-            <div class="col s12">
-                <a href="index.php" class="breadcrumb">Inicio</a>
-                <a href="privacy.php" class="breadcrumb">Política de cookies</a>
-            </div>
-        </div>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <a href="index.php" class="breadcrumb">Inicio</a>
+        <a href="privacy.php" class="breadcrumb">Política de cookies</a>
+      </div>
+    </div>
   </nav>
 
   <div class="section no-pad-bot" id="index-banner">
