@@ -24,8 +24,8 @@
     <nav class="breadcrumb-menu blue-grey lighten-1">
             <div class="nav-wrapper">
                 <div class="col s12">
-                    <a href="../index.php" class="breadcrumb">Inicio</a>
-                    <a href="../brands.php" class="breadcrumb">Marcas</a>
+                    <a href="index.php" class="breadcrumb">Inicio</a>
+                    <a href="brands.php" class="breadcrumb">Marcas</a>
                     <?php
                     $idBrand = intval($_GET['brand']);
                     getBrandRef($idBrand, $conn)

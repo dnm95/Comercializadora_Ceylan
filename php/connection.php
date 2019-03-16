@@ -1,8 +1,9 @@
 <?php
 
+  // $servername = "107.180.24.244:3306";
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "dnm95";
+  $password = "Problema56.";
   $dbname = "comercializadora_ceylan";
 
   //Create connection
