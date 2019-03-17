@@ -19,7 +19,7 @@
     <!-- NAVBAR-->
     <nav class='blue-grey darken-1' role='navigation'>
       <div class='nav-wrapper'>
-        <a id='logo-container' href='/index.php' class='brand-logo brand-stylish logo'>
+        <a id='logo-container' href='/' class='brand-logo brand-stylish logo'>
           Comercializadora Ceylán
         </a>
         <ul class='right hide-on-med-and-down menu-items'>

@@ -21,7 +21,7 @@
     <nav class="breadcrumb-menu blue-grey lighten-1">
         <div class="nav-wrapper">
             <div class="col s12">
-                <a href="../index.php" class="breadcrumb">Inicio</a>
+                <a href="/" class="breadcrumb">Inicio</a>
                 <a href="proteccion-ocular.php" class="breadcrumb">Protección Ocular</a>
             </div>
         </div>
